@@ -1,4 +1,4 @@
-from flask import Flask   #importing flask libraries
+from flask import Flask , render_template  #importing flask libraries, render_template renders the html content from "template" folder
 
 app=Flask(__name__) #instantiating class object
 
@@ -10,7 +10,7 @@ app=Flask(__name__) #instantiating class object
 
 @app.route('/')
 def home():
-    return "homepage"
+    return render_template("home.html")
 
 @app.route('/about/')   #URL to which it can be directed. keep it as '/''
 def about():
