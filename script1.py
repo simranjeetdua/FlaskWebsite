@@ -14,7 +14,7 @@ def home():
 
 @app.route('/about/')   #URL to which it can be directed. keep it as '/''
 def about():
-    return "aboutpage"
+    return render_template("about.html")
 
 if __name__=="__main__": #if this condition is true then only webpage executed, ie only when script1 is executed not imported.
     app.run(debug=True)
